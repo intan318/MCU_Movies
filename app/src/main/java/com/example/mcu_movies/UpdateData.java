@@ -9,6 +9,10 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.mcu_movies.Model.ErrorMessage;
+import com.example.mcu_movies.Network.APIInterface;
+import com.example.mcu_movies.Network.APIService;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -55,13 +59,13 @@ public class UpdateData extends AppCompatActivity {
         etFilmDirector.setText(filmDirector);
         etFilmLanguage.setText(filmLanguage);
         apiInterface = APIService.getClient().create(APIInterface.class);
-        btnAdd.setOnClickListener(view -> updateData(id, etFilmTitle.getText().toString(), id, (etFilmGenre.getText().toString()), (etReleaseYear.getText().toString()), (etFilmRating.getText().toString()), (etFilmDirector.getText().toString()), (etFilmLanguage.getText().toString())));
+        btnAdd.setOnClickListener(view -> updateData(id, etFilmTitle.getText().toString(), etFilmGenre.getText().toString(), etReleaseYear.getText().toString(), etFilmRating.getText().toString(), etFilmDirector.getText().toString(), etFilmLanguage.getText().toString()));
 
         btnDelete.setOnClickListener(view -> deleteData(id) );
 
     }
 
-    private void updateData(int i, String id, int filmTitle, String filmGenre, String releaseYear, String ratingFilm, String filmDirector, String filmLanguage){
+    private void updateData(Integer id, String filmTitle, String filmGenre, String releaseYear, String ratingFilm, String filmDirector, String filmLanguage){
         Call<ErrorMessage> dataCall = apiInterface.editFilm(id, filmTitle, filmGenre, releaseYear, ratingFilm, filmDirector, filmLanguage);
         dataCall.enqueue(new Callback<ErrorMessage>() {
             @Override
