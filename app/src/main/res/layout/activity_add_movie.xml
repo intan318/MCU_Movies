@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    >
+
+    <TextView
+        android:id="@+id/txtMovieTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/movtitle"
+        android:textSize="17sp"
+        android:textColor="#000"
+        />
+
+    <EditText
+        android:id="@+id/editMovieTitle"
+        app:layout_constraintTop_toBottomOf="@id/txtMovieTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ex: The Avengers"
+        />
+
+    <TextView
+        android:id="@+id/txtMovieGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/editMovieTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/movgenre"
+        android:textSize="17sp"
+        android:textColor="#000"
+        />
+
+    <EditText
+        android:id="@+id/editMovieGenre"
+        app:layout_constraintTop_toBottomOf="@id/txtMovieGenre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ex: Action"
+        />
+
+    <TextView
+        android:id="@+id/txtReleaseYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/editMovieGenre"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/movreleaseyear"
+        android:textSize="17sp"
+        android:textColor="#000"
+        />
+
+    <EditText
+        android:id="@+id/editReleaseYear"
+        app:layout_constraintTop_toBottomOf="@id/txtReleaseYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ex: 2012"
+        />
+
+    <TextView
+        android:id="@+id/txtMovieRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/editReleaseYear"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/movrating"
+        android:textSize="17sp"
+        android:textColor="#000"
+        />
+
+    <EditText
+        android:id="@+id/editMovieRating"
+        app:layout_constraintTop_toBottomOf="@id/txtMovieRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ex: 8"
+        />
+
+    <TextView
+        android:id="@+id/txtMovDirector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/editMovieRating"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/movdirector"
+        android:textSize="17sp"
+        android:textColor="#000"
+        />
+
+    <EditText
+        android:id="@+id/editMovieDirector"
+        app:layout_constraintTop_toBottomOf="@id/txtMovDirector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ex: Quentin Tarantino"
+        />
+
+    <TextView
+        android:id="@+id/txtMovieLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/editMovieDirector"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/movlanguage"
+        android:textSize="17sp"
+        android:textColor="#000"
+        />
+
+    <EditText
+        android:id="@+id/editMovieLanguage"
+        app:layout_constraintTop_toBottomOf="@id/txtMovieLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ex: English"
+        />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_marginTop="40dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/editMovieLanguage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/add"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnAdd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/delete"
+        android:textStyle="bold"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
